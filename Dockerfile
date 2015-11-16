@@ -4,10 +4,10 @@ MAINTAINER Ariel Rokem <arokem@gmail.com>
 RUN apt-get update && apt-get install -y python-sklearn \
 python-dipy \
 python-pip \
-git
+git \
+python-cvxopt
 RUN pip install --upgrade dipy
 RUN pip install cython
-RUN pip install cvxopt
 RUN pip install sphinx
 RUN git clone https://github.com/nipy/dipy.git
 RUN cd dipy && python setup.py install
