@@ -7,5 +7,7 @@ python-pip \
 git
 RUN pip install --upgrade dipy
 RUN pip install cython
+RUN pip install cvxopt
+RUN pip install sphinx
 RUN git clone https://github.com/nipy/dipy.git
-RUN cd dipy && python setup.py install 
+RUN cd dipy && python setup.py install
