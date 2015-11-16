@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y python-sklearn \
 python-dipy \
 python-pip \
 git \
-python-cvxopt
+python-cvxopt \
+Xvfb
 RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
