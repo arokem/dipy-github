@@ -11,6 +11,5 @@ RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
 RUN pip install xvfbwrapper
-RUN git clone https://github.com/nipy/dipy.git
-RUN cd dipy && python setup.py install
 ENV TEST_WITH_XVFB=true
+CMD git clone https://github.com/nipy/dipy.git && cd dipy && python setup.py install && cd doc && make html
